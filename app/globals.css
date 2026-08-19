@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "ChicagoKare";
+  src: url("/fonts/ChicagoKare-Regular.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HighTower";
+  src: url("/fonts/HighTowerText-Reg.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HighTower";
+  src: url("/fonts/HighTowerText-Italic.ttf") format("truetype");
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IosevkaDiamond";
+  src: url("/fonts/IosevkaDiamond-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IosevkaDiamondThin";
+  src: url("/fonts/IosevkaDiamond-Thin.ttf") format("truetype");
+  font-display: swap;
+}
+
+html,
+body {
+  background: #000000;
+  margin: 0;
+  padding: 0;
+  scrollbar-width: thin;
+  scrollbar-color: #333333 #000000;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border: 2px solid #000000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #55ffbb;
+}
+
+::-webkit-scrollbar-corner {
+  background: #000000;
+}
+
+.popup-scroll {
+  scrollbar-width: auto;
+  scrollbar-color: auto;
+  overflow-x: hidden;
+  overflow-wrap: anywhere;
+}
+
+.popup-scroll::-webkit-scrollbar {
+  width: 7px;
+}
+
+.popup-scroll::-webkit-scrollbar-track {
+  background: linear-gradient(
+    to right,
+    transparent 3px,
+    #55ffbb 3px,
+    #55ffbb 4px,
+    transparent 4px
+  );
+}
+
+.popup-scroll::-webkit-scrollbar-thumb {
+  background: #00e1df;
+  border-radius: 4px;
+}
+
+img {
+  max-width: none;
+  -webkit-user-drag: none;
+  user-select: none;
+}

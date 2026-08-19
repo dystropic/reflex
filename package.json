@@ -1,0 +1,41 @@
+{
+  "name": "antics_web",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@near-wallet-selector/core": "^10.1.4",
+    "@near-wallet-selector/here-wallet": "^10.1.4",
+    "@near-wallet-selector/meteor-wallet": "^10.1.4",
+    "@near-wallet-selector/my-near-wallet": "^10.1.4",
+    "@prisma/client": "^6.19.3",
+    "@solana/spl-token": "^0.4.15",
+    "@solana/web3.js": "^1.98.4",
+    "@tanstack/react-query": "^5.101.4",
+    "bcryptjs": "^3.0.3",
+    "borsh": "^2.0.0",
+    "bs58": "^6.0.0",
+    "buffer": "^6.0.3",
+    "next": "16.3.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "server-only": "^0.0.1",
+    "stripe": "^22.3.2",
+    "tweetnacl": "^1.0.3",
+    "viem": "^2.55.13",
+    "wagmi": "^3.7.6"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "prisma": "^6.19.3",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

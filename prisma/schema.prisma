@@ -1,0 +1,63 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id              String           @id @default(cuid())
+  email           String?          @unique
+  emailVerifiedAt DateTime?
+  passwordHash    String?
+  walletAddress   String?          @unique
+  createdAt       DateTime         @default(now())
+  sessions        Session[]
+  reserveFundings ReserveFunding[]
+}
+
+model Session {
+  token     String   @id
+  userId    String
+  expiresAt DateTime
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model WalletNonce {
+  address   String   @id
+  nonce     String
+  expiresAt DateTime
+}
+
+model PasswordReset {
+  token     String    @id
+  userId    String
+  expiresAt DateTime
+  usedAt    DateTime?
+}
+
+model EmailVerification {
+  token     String    @id
+  userId    String
+  expiresAt DateTime
+  usedAt    DateTime?
+}
+
+model ReserveFunding {
+  id              String   @id @default(cuid())
+  userId          String
+  code            String
+  method          String
+  asset           String?
+  chainId         Int?
+  amountCents     Int
+  txHash          String?  @unique
+  stripeSessionId String?  @unique
+  status          String
+  createdAt       DateTime @default(now())
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, code])
+}

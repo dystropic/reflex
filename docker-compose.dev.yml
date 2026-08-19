@@ -1,0 +1,14 @@
+services:
+  db:
+    image: postgres:16-alpine
+    ports:
+      - "5434:5432"
+    environment:
+      POSTGRES_USER: reflex
+      POSTGRES_PASSWORD: reflex
+      POSTGRES_DB: reflex
+    volumes:
+      - reflex-pg:/var/lib/postgresql/data
+
+volumes:
+  reflex-pg:

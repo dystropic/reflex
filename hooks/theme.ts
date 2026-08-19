@@ -1,0 +1,16 @@
+export const COLORS = {
+  bg: "#000000",
+  text: "#f5f4f6",
+  warm: "#e7e6ea",
+  dim: "#808080",
+  green: "#55ffbb",
+  cyan: "#00e1df",
+  yellow: "#dae61a",
+  reserve: "#ddddd2",
+  ready: "#1ae679",
+  stby: "#808080",
+  bezel: "#e7e6ea",
+  glyph: "#e9e9ea",
+  select: "#12211c",
+  err: "#ff7a68",
+};
