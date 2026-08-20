@@ -126,7 +126,6 @@ export function MobileLanding() {
           <span className="cursor-pointer self-start" onClick={() => setInfoPopup("not-contract")}>not a contract</span>
           <span className="cursor-pointer self-start" onClick={() => setInfoPopup("not-grant")}>not a grant</span>
           <span className="cursor-pointer self-start" onClick={() => setInfoPopup("reverse-grant")}>maybe a reverse grant</span>
-          <span>almost a retroactive preflex* (huh?)</span>
         </div>
         <span>
           A word can pull a thought behind it, new constraints at every turn, and for each one a thousand

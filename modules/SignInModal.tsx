@@ -4,6 +4,7 @@ import { useState } from "react";
 import { COLORS } from "../hooks/theme";
 import { NearAuth } from "./NearAuth";
 import { Popup } from "./Popup";
+import { SolanaAuth } from "./SolanaAuth";
 import { WalletAuth } from "./WalletAuth";
 
 const inputStyle: React.CSSProperties = {
@@ -139,6 +140,16 @@ export function SignInModal({
               near
             </span>
             <NearAuth onSignedIn={onSignedIn} />
+            <span
+              className="overflow-hidden whitespace-nowrap"
+              style={{ fontFamily: "ChicagoKare, monospace", fontSize: 12, color: COLORS.dim }}
+            >
+              {".".repeat(120)}
+            </span>
+            <span style={{ fontFamily: "ChicagoKare, monospace", fontSize: 12, color: COLORS.green }}>
+              solana
+            </span>
+            <SolanaAuth onSignedIn={onSignedIn} />
           </div>
         ) : (
           <div className="flex relative flex-col" style={{ gap: 16 }}>

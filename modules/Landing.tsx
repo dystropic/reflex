@@ -134,7 +134,6 @@ export function Landing() {
         <span className="cursor-pointer self-start" onClick={() => setInfoPopup("not-contract")}>not a contract</span>
         <span className="cursor-pointer self-start" onClick={() => setInfoPopup("not-grant")}>not a grant</span>
         <span className="cursor-pointer self-start" onClick={() => setInfoPopup("reverse-grant")}>maybe a reverse grant</span>
-        <span>almost a retroactive preflex* (huh?)</span>
       </div>
       <div
         className="flex relative"
@@ -259,14 +258,14 @@ export function Landing() {
                 top: row.y,
                 width: 1115 - row.x,
                 background:
-                  clickable && constraintIdx !== -1 && selected === constraintIdx
+                  constraintIdx !== -1 && selected === constraintIdx
                     ? COLORS.select
                     : "transparent",
                 fontFamily: display.thin ? "IosevkaDiamondThin, monospace" : "IosevkaDiamond, monospace",
                 fontSize: 24,
                 color: COLORS.reserve,
               }}
-              onMouseEnter={() => (clickable && constraintIdx !== -1 ? setSelected(constraintIdx) : null)}
+              onMouseEnter={() => (constraintIdx !== -1 ? setSelected(constraintIdx) : null)}
               onClick={() => {
                 if (!clickable || !row.code) {
                   setInfoPopup("reserves");

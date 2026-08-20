@@ -13,10 +13,10 @@ export const RESERVE_ROWS: ReserveRow[] = [
   { x: 795, y: 1153, kind: "fund", code: "rc-01" },
   { x: 795, y: 1247, kind: "fund", code: "rc-02" },
   { x: 795, y: 1298, kind: "fund", code: "rc-03" },
-  { x: 793, y: 1393, kind: "stby", code: null },
-  { x: 793, y: 1442, kind: "stby", code: null },
-  { x: 793, y: 1490, kind: "stby", code: null },
-  { x: 793, y: 1538, kind: "stby", code: null },
+  { x: 793, y: 1393, kind: "stby", code: "rc-04" },
+  { x: 793, y: 1442, kind: "stby", code: "rc-05" },
+  { x: 793, y: 1490, kind: "stby", code: "rc-06" },
+  { x: 793, y: 1538, kind: "stby", code: "rc-07" },
 ];
 
 export function rowDisplay(row: ReserveRow, totals: ReserveTotals) {

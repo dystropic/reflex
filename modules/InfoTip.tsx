@@ -50,7 +50,13 @@ export function InfoTip({ id, scale = 1 }: { id: string; scale?: number }) {
               def.body.map((paragraph, index) => (
                 <span
                   key={index}
-                  style={{ fontFamily: "HighTower, serif", fontSize: s(20), lineHeight: `${s(28)}px`, color: "#ebebeb" }}
+                  style={{
+                    fontFamily: "HighTower, serif",
+                    fontSize: s(20),
+                    lineHeight: `${s(28)}px`,
+                    color: "#ebebeb",
+                    textAlign: paragraph.startsWith("\"Guhmorfloping") ? "left" : "right",
+                  }}
                 >
                   {paragraph}
                 </span>
